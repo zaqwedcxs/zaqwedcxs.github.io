@@ -10,3 +10,6 @@
     margin-left: -64px;
     margin-top: -64px;
 }
+.rotated {
+    transform: rotateY(180deg);
+}
