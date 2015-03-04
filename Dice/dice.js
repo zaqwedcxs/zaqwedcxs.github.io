@@ -40,10 +40,10 @@ function rollDice() {
     // Roll all of the dice
     // TODO: remove the 'selectable' class from all elements that have both
     //       the 'die' and 'hold' class
-
+    $('.die.hold').removeClass('selectable')
     // TODO: set the 'data-roll' attribute to the randomRoll function
     //       for all elements that have the 'die' and 'selectable' class
-    
+    $('.die.selectable').attr('data-roll', randomRoll);
     // Leave this here to update the state after the dice are rolled
     $('.game').trigger('update-game-state');
 }
@@ -52,7 +52,7 @@ function rollDice() {
 function holdDie() {
     // TODO: toggle the class 'hold' for the die that was just clicked
     // HINT: It will start with $(this)
-
+    $(this).toggleClass('hold');
     // Leave this here to update the state after the die is held
     $('.game').trigger('update-game-state');
 }
